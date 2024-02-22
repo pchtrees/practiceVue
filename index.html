@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Vue</title>
+
+</head>
+<body>
+<h1>Hello, Vue</h1>
+<div id="app">
+    <div v-if="showBooks">
+        <p>{{ title }} - {{ author }} - {{ age }}</p>
+    </div>
+    <button @click="toggleShowBooks">
+        <span v-if="showBooks">Hide Books</span>
+        <span v-else>Show Books</span>
+    </button>
+
+    <br>
+    <!-- mouse events -->
+    <div class="flex">
+        <div class="box p-10 w-40 text-center bg-clifford m-2"></div>
+        <div class="box p-10 w-40 text-center bg-[#ddd] m-2"></div>
+        <div class="box p-10 w-40 text-center bg-[#ddd] m-2"></div>
+        <div class="box p-10 w-40 text-center bg-[#ddd] m-2"></div>
+    </div>
+</div>
+<script>
+    const tailwindConfig = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+            }
+        }
+    };
+</script>
+<script src="app.js"></script>
+</body>
+</html>
